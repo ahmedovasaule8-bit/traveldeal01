@@ -1,8 +1,11 @@
 (() => {
  const money = n => new Intl.NumberFormat('ru-RU').format(n) + ' ₸';
  const stars = n => '★'.repeat(n);
- const art = theme => `<div class="card-art ${theme}"><span class="art-sun"></span><span class="art-wave"></span><span class="art-palm">♣</span></div>`;
- const card = t => `<article class="tour-card">${art(t.theme)}<div class="card-body"><div class="card-top"><span class="badge">${t.tag}</span><span class="rating">★ ${t.rating} <small>(${t.reviews})</small></span></div><p class="location">${t.country} · ${t.city}</p><h3>${t.hotel} <span class="stars">${stars(t.stars)}</span></h3><p class="details">${t.nights} ночей · ${t.meal}</p><div class="card-price"><div><del>${money(t.oldPrice)}</del><strong>от ${money(t.price)}</strong><small>за двоих</small></div><a href="tour.html?id=${t.id}" class="round-arrow" aria-label="Подробнее о туре">→</a></div></div></article>`;
+const art = t => `
+<div class="card-art">
+    <img src="${t.image || 'turk.jpg'}" alt="${t.hotel}" style="width:100%;height:220px;object-fit:cover;border-radius:16px;">
+</div>`;
+ const card = t => `<article class="tour-card">${art(t)}<div class="card-body"><div class="card-top"><span class="badge">${t.tag}</span><span class="rating">★ ${t.rating} <small>(${t.reviews})</small></span></div><p class="location">${t.country} · ${t.city}</p><h3>${t.hotel} <span class="stars">${stars(t.stars)}</span></h3><p class="details">${t.nights} ночей · ${t.meal}</p><div class="card-price"><div><del>${money(t.oldPrice)}</del><strong>от ${money(t.price)}</strong><small>за двоих</small></div><a href="tour.html?id=${t.id}" class="round-arrow" aria-label="Подробнее о туре">→</a></div></div></article>`;
  const grid = document.querySelector('#tourGrid');
  if (grid) {
   const dest = document.querySelector('#destination'); [...new Set(tours.map(t=>t.country))].forEach(c=>dest.insertAdjacentHTML('beforeend',`<option value="${c}">${c}</option>`));
