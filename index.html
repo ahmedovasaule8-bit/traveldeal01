@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TravelDeals — горящие туры по лучшим ценам">
+  <title>TravelDeals — горящие туры</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="TravelDeals — на главную"><span>Travel</span>Deals</a>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="main-nav"><a href="#tours">Туры</a><a href="#directions">Направления</a><a href="#how">Как это работает</a><a href="#contacts">Контакты</a></nav>
+    <a class="header-phone" href="tel:+77001234567">+7 700 123 45 67</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">Путешествия начинаются здесь</p><h1>Горящие туры,<br><em>в которые хочется</em></h1><p class="hero-text">Подберём отдых у моря, в горах или в новом городе — быстро, честно и по отличной цене.</p><a class="button button-light" href="#tours">Найти тур <span>→</span></a></div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="mountain m1"></div><div class="mountain m2"></div><div class="sea"></div><div class="plane">✈</div></div>
+    </section>
+
+    <section class="search-panel" aria-label="Поиск туров">
+      <form id="tourSearch" class="search-form">
+        <label>Откуда<select id="from"><option>Алматы</option><option>Астана</option><option>Шымкент</option></select></label>
+        <label>Куда<select id="destination"><option value="">Любое направление</option></select></label>
+        <label>Дата вылета<input id="date" type="date"></label>
+        <label>Туристы<select id="people"><option>2 взрослых</option><option>1 взрослый</option><option>2 взрослых + ребёнок</option></select></label>
+        <button class="button" type="submit">Подобрать</button>
+      </form>
+    </section>
+
+    <section class="section" id="tours">
+      <div class="section-heading"><div><p class="eyebrow">Лучшая цена сегодня</p><h2>Горящие предложения</h2></div><button class="link-button" id="resetFilters">Сбросить фильтры</button></div>
+      <div class="filters"><button class="chip active" data-filter="all">Все</button><button class="chip" data-filter="Турция">Турция</button><button class="chip" data-filter="Египет">Египет</button><button class="chip" data-filter="ОАЭ">ОАЭ</button><button class="chip" data-filter="Таиланд">Таиланд</button><select id="sort" aria-label="Сортировка"><option value="popular">Сначала популярные</option><option value="priceUp">Цена: по возрастанию</option><option value="priceDown">Цена: по убыванию</option></select></div>
+      <div class="tour-grid" id="tourGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>Ничего не найдено. Попробуйте изменить параметры поиска.</p>
+    </section>
+
+    <section class="features" id="how"><article><span>⚡</span><h3>Актуальные цены</h3><p>Проверяем стоимость у туроператоров каждый день.</p></article><article><span>🛡</span><h3>Надёжный отдых</h3><p>Работаем только с проверенными партнёрами.</p></article><article><span>💬</span><h3>Всегда на связи</h3><p>Поможем выбрать, оформить и подготовиться к поездке.</p></article></section>
+
+    <section class="section directions" id="directions"><div class="section-heading"><div><p class="eyebrow">Вдохновение для поездки</p><h2>Популярные направления</h2></div></div><div class="direction-grid"><a href="#tours" class="direction turkey"><span>Турция</span><small>пляжи и all inclusive</small></a><a href="#tours" class="direction egypt"><span>Египет</span><small>море круглый год</small></a><a href="#tours" class="direction uae"><span>ОАЭ</span><small>город будущего</small></a><a href="#tours" class="direction thailand"><span>Таиланд</span><small>тропики и улыбки</small></a></div></section>
+
+    <section class="newsletter" id="contacts"><div><p class="eyebrow">Не пропускайте выгодное</p><h2>Горящие туры прямо в почту</h2><p>Отправляем только лучшее — не чаще одного раза в неделю.</p></div><form id="subscribeForm"><input type="email" required placeholder="Ваш e-mail" aria-label="Ваш e-mail"><button class="button button-light" type="submit">Подписаться</button><p class="form-message" aria-live="polite"></p></form></section>
+  </main>
+  <footer><a class="logo" href="index.html"><span>Travel</span>Deals</a><p>© 2026 TravelDeals. Путешествуйте чаще.</p><div><a href="tel:+77001234567">+7 700 123 45 67</a><a href="mailto:hello@traveldeals.kz">hello@traveldeals.kz</a></div></footer>
+  <script src="data/tours.js"></script><script src="js/app.js"></script>
+</body></html>

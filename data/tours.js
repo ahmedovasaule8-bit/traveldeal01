@@ -1,0 +1,8 @@
+const tours = [
+ {id:1,country:'Турция',city:'Анталья',hotel:'Rixos Downtown Antalya',stars:5,nights:7,meal:'Ultra All Inclusive',oldPrice:738000,price:529000,rating:9.1,reviews:318,tag:'Хит продаж',theme:'turkey',description:'Стильный городской отель рядом с пляжем Коньяалты и старым городом Антальи.'},
+ {id:2,country:'Египет',city:'Шарм-эль-Шейх',hotel:'Sunrise Diamond Beach',stars:5,nights:8,meal:'All Inclusive',oldPrice:610000,price:426000,rating:8.8,reviews:206,tag:'−30%',theme:'egypt',description:'Коралловый риф, собственный пляж и насыщенная программа для всей семьи.'},
+ {id:3,country:'ОАЭ',city:'Рас-эль-Хайма',hotel:'Rixos Al Mairid Ras Al Khaimah',stars:5,nights:6,meal:'Ultra All Inclusive',oldPrice:895000,price:694000,rating:9.3,reviews:147,tag:'Премиум',theme:'uae',description:'Пятизвёздочный курорт на берегу Персидского залива с безупречным сервисом.'},
+ {id:4,country:'Таиланд',city:'Пхукет',hotel:'The Nature Phuket',stars:5,nights:9,meal:'Завтраки',oldPrice:780000,price:575000,rating:8.7,reviews:482,tag:'Выбор туристов',theme:'thailand',description:'Тропический отдых в окружении зелени, всего в нескольких минутах от Патонга.'},
+ {id:5,country:'Турция',city:'Кемер',hotel:'Akka Alinda Hotel',stars:5,nights:7,meal:'All Inclusive',oldPrice:675000,price:468000,rating:9.0,reviews:267,tag:'Семейный',theme:'turkey',description:'Зелёная территория у подножия Таврских гор, водные горки и отличный пляж.'},
+ {id:6,country:'Египет',city:'Хургада',hotel:'Jaz Aquamarine Resort',stars:5,nights:7,meal:'All Inclusive',oldPrice:589000,price:449000,rating:8.9,reviews:196,tag:'Горящий тур',theme:'egypt',description:'Большой курорт с аквапарком, песчаным входом в море и просторными номерами.'}
+];
